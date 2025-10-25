@@ -4,11 +4,11 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function BarraNavegacion() {
     return (
-        <Navbar expand="lg" className="bg-body-tertiary">
+        <Navbar expand="lg" className="">
             <Container>
 
                 <Navbar.Brand href="" className="fw-bold">
-                    <img src='assets/images/HelioAndesLogo.png' style={{width: '40px'}} />
+                    <img src='assets/images/HelioAndesLogo.png' style={{ width: '40px' }} />
                     HelioAndes
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
