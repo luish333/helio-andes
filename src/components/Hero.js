@@ -4,7 +4,7 @@ import Image from 'react-bootstrap/Image';
 
 function Introduccion() {
     return (
-        <div className="bg-light">
+        <div className="" style={{ background: 'rgba(199, 238, 195, 0.39)' }}>
             <Container className="py-4">
                 <Row className="">
                     <Col lg={6}>
