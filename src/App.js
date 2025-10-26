@@ -3,6 +3,7 @@ import './App.css';
 import BarraNavegacion from './components/Navbar';
 import Introduccion from './components/Hero';
 import SeccionServicio from './components/Servicios';
+import SeccionSoluciones from './components/Soluciones';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <BarraNavegacion />
       <Introduccion />
       <SeccionServicio />
+      <SeccionSoluciones />
     </div>
   );
 }
