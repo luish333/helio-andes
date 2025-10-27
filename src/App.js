@@ -4,7 +4,10 @@ import BarraNavegacion from './components/Navbar';
 import Introduccion from './components/Hero';
 import SeccionServicio from './components/Servicios';
 import SeccionSoluciones from './components/Soluciones';
-import CalculadoraIntegral from './components/CalculadoraIntegral'; 
+import CalculadoraIntegral from './components/CalculadoraIntegral';
+import SeccionPlanes from './components/Planes';
+import SeccionTestimonios from './components/Testimonios';
+import SeccionPreguntas from './components/FAQ';
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
       <SeccionServicio />
       <SeccionSoluciones />
       <CalculadoraIntegral />
+      <SeccionPlanes />
+      <SeccionTestimonios />
+      <SeccionPreguntas />
     </div>
   );
 }
