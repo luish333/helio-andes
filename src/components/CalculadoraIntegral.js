@@ -28,7 +28,7 @@ function CalculadoraIntegral() {
 
   const nz = (v) => (isNaN(v) ? 0 : Math.max(0, v));
 
-  // --- Parámetros derivados (sin useMemo)
+  
   const recargoTechoPct =
     tipoTecho === "teja" ? 0.05 :
     tipoTecho === "zinc" ? 0.02 :
@@ -65,7 +65,7 @@ function CalculadoraIntegral() {
     planPago === "contado" ? { tasa: 0, cuotas: 1 } :
     { tasa: 0, cuotas: 0 };
 
-  // --- Cálculos
+
   const potenciaKW = (nz(panelW) * nz(cantPaneles)) / 1000;
 
   const subtotalPaneles = nz(precioPanel) > 0 ? nz(precioPanel) * nz(cantPaneles) : 0;
@@ -404,3 +404,4 @@ Total final: ${CLP(totalFinal)}
 }
 
 export default CalculadoraIntegral;
+
