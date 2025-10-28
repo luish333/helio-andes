@@ -8,6 +8,8 @@ import CalculadoraIntegral from './components/CalculadoraIntegral';
 import SeccionPlanes from './components/Planes';
 import SeccionTestimonios from './components/Testimonios';
 import SeccionPreguntas from './components/FAQ';
+import SeccionContacto from './components/Contacto';
+import FooterPrincipal from './components/Footer';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <SeccionPlanes />
       <SeccionTestimonios />
       <SeccionPreguntas />
+      <SeccionContacto />
+      <FooterPrincipal />
     </div>
   );
 }
