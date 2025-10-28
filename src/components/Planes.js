@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 
 function SeccionPlanes() {
     return (
-        <div className="" style={{ background: 'rgba(199, 238, 195, 0.43)' }}>
+        <div className="" id="planes" style={{ background: 'rgba(199, 238, 195, 0.43)' }}>
             <Container className="py-4">
 
                 <Row className="text-center mb-4" >

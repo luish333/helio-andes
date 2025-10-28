@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 
 function SeccionServicio() {
     return (
-        <div className="" style={{ background: 'rgba(199, 238, 195, 0.43)' }}>
+        <div className="" id="servicios" style={{ background: 'rgba(199, 238, 195, 0.43)' }}>
             <Container className="py-2">
 
                 <Row className="text-center mb-2" >

@@ -52,7 +52,7 @@ function SeccionContacto() {
     };
 
     return (
-        <div style={{ background: '#c7eec36e'}}>
+        <div id="contacto" style={{ background: '#c7eec36e'}}>
             <Container className='py-4 rounded' style={{ background: 'rgba(157, 187, 151, 0.34)'}}>
                 <Row className="text-center">
                     <Col>

@@ -156,7 +156,7 @@ Total final: ${CLP(totalFinal)}
   };
 
   return (
-    <div className="container my-4">
+    <div className="container my-4" id="demo">
       <div className="row g-4">
         <div className="col-12 col-lg-6">
           <div className="p-3 bg-light rounded border">

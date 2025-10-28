@@ -4,7 +4,7 @@ import Accordion from 'react-bootstrap/Accordion';
 function SeccionPreguntas() {
     return (
 
-        <div className="" style={{ background: 'rgba(199, 238, 195, 0.43)' }}>
+        <div className="" id="faq" style={{ background: 'rgba(199, 238, 195, 0.43)' }}>
             <Container className='py-4'>
 
                 <Row className="text-center mb-4" >
