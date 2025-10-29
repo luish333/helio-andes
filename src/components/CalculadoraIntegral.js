@@ -29,41 +29,78 @@ function CalculadoraIntegral() {
   const nz = (v) => (isNaN(v) ? 0 : Math.max(0, v));
 
   
-  const recargoTechoPct =
-    tipoTecho === "teja" ? 0.05 :
-    tipoTecho === "zinc" ? 0.02 :
-    tipoTecho === "hormigon" ? 0.07 : 0;
+let recargoTechoPct = 0;
+if (tipoTecho === "teja") {
+  recargoTechoPct = 0.05;
+} else if (tipoTecho === "zinc") {
+  recargoTechoPct = 0.02;
+} else if (tipoTecho === "hormigon") {
+  recargoTechoPct = 0.07;
+}
 
-  const regionBaseEnvio =
-    region === "rm" ? 5000 :
-    region === "norte" ? 9000 :
-    region === "sur" ? 10000 :
-    region === "austral" ? 15000 : 0;
 
-  const complejidadPct =
-    complejidad === "baja" ? 0.0 :
-    complejidad === "media" ? 0.08 :
-    complejidad === "alta" ? 0.15 : 0;
+let regionBaseEnvio = 0;
+if (region === "rm") {
+  regionBaseEnvio = 5000;
+} else if (region === "norte") {
+  regionBaseEnvio = 9000;
+} else if (region === "sur") {
+  regionBaseEnvio = 10000;
+} else if (region === "austral") {
+  regionBaseEnvio = 15000;
+}
 
-  const subsidioPct =
-    subsidio === "residencial" ? -0.08 :
-    subsidio === "pyme" ? -0.05 : 0;
 
-  const envioMultiplicador =
-    envioMetodo === "expres" ? 1.2 :
-    envioMetodo === "estandar" ? 1.0 : 0;
 
-  const garantiaPct =
-    garantia === "12" ? 0.02 :
-    garantia === "24" ? 0.04 :
-    garantia === "36" ? 0.06 : 0;
+let complejidadPct = 0;
+if (complejidad === "baja") {
+  complejidadPct = 0.0;
+} else if (complejidad === "media") {
+  complejidadPct = 0.08;
+} else if (complejidad === "alta") {
+  complejidadPct = 0.15;
+}
 
-  const planPagoInfo =
-    planPago === "6" ? { tasa: 0.012, cuotas: 6 } :
-    planPago === "12" ? { tasa: 0.011, cuotas: 12 } :
-    planPago === "24" ? { tasa: 0.010, cuotas: 24 } :
-    planPago === "contado" ? { tasa: 0, cuotas: 1 } :
-    { tasa: 0, cuotas: 0 };
+
+
+let subsidioPct = 0;
+if (subsidio === "residencial") {
+  subsidioPct = -0.08;
+} else if (subsidio === "pyme") {
+  subsidioPct = -0.05;
+}
+
+
+let envioMultiplicador = 0; // mantiene la obligación de elegir método
+if (envioMetodo === "expres") {
+  envioMultiplicador = 1.2;
+} else if (envioMetodo === "estandar") {
+  envioMultiplicador = 1.0;
+}
+
+
+let garantiaPct = 0;
+if (garantia === "12") {
+  garantiaPct = 0.02;
+} else if (garantia === "24") {
+  garantiaPct = 0.04;
+} else if (garantia === "36") {
+  garantiaPct = 0.06;
+}
+
+
+
+let planPagoInfo = { tasa: 0, cuotas: 0 };
+if (planPago === "6") {
+  planPagoInfo = { tasa: 0.012, cuotas: 6 };
+} else if (planPago === "12") {
+  planPagoInfo = { tasa: 0.011, cuotas: 12 };
+} else if (planPago === "24") {
+  planPagoInfo = { tasa: 0.010, cuotas: 24 };
+} else if (planPago === "contado") {
+  planPagoInfo = { tasa: 0, cuotas: 1 };
+}
+
 
 
   const potenciaKW = (nz(panelW) * nz(cantPaneles)) / 1000;
